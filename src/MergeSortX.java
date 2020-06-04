@@ -130,7 +130,7 @@ public class MergeSortX {
         for(int k=lo; k<=hi; k++) {
             if      (i>mid)                         a[k] = aux[j++]; //zakonchilis i
             else if (j>hi)                          a[k] = aux[i++]; //zakonchilis j
-            else if (less(a[j], a[i], comparator))  a[k] = aux[j++]; //j<i
+            else if (less(aux[j], aux[i], comparator))  a[k] = aux[j++]; //j<i
             else                                    a[k] = aux[i++]; //i<=j
         }
         assert isSorted(a, comparator, lo, hi);
